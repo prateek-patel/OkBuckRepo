@@ -1,0 +1,8 @@
+[alias]
+
+[android]
+	build_tools_version = 25.0.2
+	target = android-25
+
+[project]
+	ignore = .git,**/.svn

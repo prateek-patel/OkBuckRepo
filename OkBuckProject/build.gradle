@@ -1,0 +1,45 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+//        classpath 'com.android.tools.build:gradle:2.2.3'
+        classpath 'com.uber:okbuck:0.14.4'
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+/*
+//apply plugin: 'com.uber.okbuck'
+okbuck {
+    buildToolsVersion "24.0.2"
+    target = "android-24"
+    buckProjects = project.subprojects
+
+    linearAllocHardLimit = [
+            app: 16 * 1024 * 1024
+    ]
+
+    primaryDexPatterns = [
+            app: [
+                    '^com/uber/okbuck/example/AppShell^',
+                    '^com/uber/okbuck/example/BuildConfig^',
+                    '^android/support/multidex/',
+                    '^com/facebook/buck/android/support/exopackage/',
+                    '^com/squareup/leakcanary/LeakCanary^',
+            ]
+    ]
+
+}*/
